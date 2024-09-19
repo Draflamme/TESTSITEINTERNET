@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Amour</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pour Toi, Mon Amour</h1>
+        </header>
+        <main>
+            <section class="product-card">
+                <h2>Un Week-end Inoubliable</h2>
+                <p>Acheter ceci pour passer un merveilleux week-end avec l'amour de votre vie</p>
+                <button onclick="revealPopup()">Découvrir</button>
+            </section>
+        </main>
+    </div>
+
+    <!-- Pop-up -->
+    <div id="popup" class="hidden popup">
+        <div class="popup-content">
+            <!-- Texte initial placé en haut -->
+            <h2>💖 Pour toi, Daphnée ! 💖</h2>
+            <p>Je t'aime et ce week-end, on pourra faire tout ce que tu veux ! 🌹</p>
+            
+            <!-- Boutons avec redirections vers les pages -->
+            <a href="page1.html" class="popup-button" target="_blank">Découvrez votre bon d'achat n°1</a>
+            <a href="page2.html" class="popup-button" target="_blank">Découvrez votre bon d'achat n°2</a>
+            <a href="page3.html" class="popup-button" target="_blank">Découvrez votre bon d'achat n°3</a>
+            
+            <button class="close-button" onclick="closePopup()">Fermer</button>
+        </div>
+    </div>
+
+    <script>
+        function revealPopup() {
+            document.getElementById('popup').classList.remove('hidden');
+        }
+
+        function closePopup() {
+            document.getElementById('popup').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
